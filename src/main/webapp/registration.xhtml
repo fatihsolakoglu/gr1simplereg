@@ -10,7 +10,37 @@
         <h:form id="registrationForm">
             
             <p:panel header="Registration Form" style="width: 500px;">
+             
+                <p:messages/>
                 
+                <p:panelGrid columns="2">
+                    
+                    <p:outputLabel value="UserName:"/>
+                    <p:inputText id="userName" value="#{userController.
+                                                        registrationUser.userName}" label="UserName" />
+                    <p:outputLabel value="Password:"/>
+                    <p:password id="password" value="#{userController.
+                                                       registrationUser.password}" label="Password"/>
+                    <p:outputLabel value="FirstName:"/>
+                    <p:inputText id="firstName" value="#{userController.
+                                                         registrationUser.firstName}" label="FirstName"/>
+                    <p:outputLabel value="LastName:"/>
+                    <p:inputText id="lastName" value="#{userController.
+                                                        registrationUser.lastName}"/>
+                    <p:outputLabel value="Email:"/>
+                    <p:inputText id="email" value="#{userController.
+                                                     registrationUser.email}"/>
+                    
+                    <p:outputLabel value="Age:"/>
+                    <p:inputMask id="age" value="#{userController.
+                                                   registrationUser.age}" mask="999"/>
+                    
+                    <p:outputLabel value=""/>
+                    <p:commandButton action="#{userController.register()}"
+                                     value="Register" update="registrationForm"/>
+                    
+                    
+                </p:panelGrid>
                 
             </p:panel>
             
