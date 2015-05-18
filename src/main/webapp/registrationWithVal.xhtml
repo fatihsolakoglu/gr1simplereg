@@ -7,6 +7,7 @@
       xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>Registration</title>
+        
     </h:head>
     <body>
         <h:form id="registrationForm">
@@ -32,6 +33,7 @@ registrationUser.password}"
                     <p:inputText id="firstName" value="#{userController.
 registrationUser.firstName}"
                                  required="true" label="FirstName">
+                      <p:ajax event="keyup" update="firstNameMsg"/>   
                     </p:inputText>
                     <p:message id="firstNameMsg" for="firstName"/>
                     <p:outputLabel value="LastName:"/>

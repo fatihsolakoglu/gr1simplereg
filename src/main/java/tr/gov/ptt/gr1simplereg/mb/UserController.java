@@ -45,6 +45,6 @@ public class UserController {
         FacesContext.getCurrentInstance().getExternalContext()
                 .getFlash().setKeepMessages(true);
         
-        return "registration.jsf?faces-redirect=true"; 
+        return "registration.xhtml?faces-redirect=true"; 
     }
 }
